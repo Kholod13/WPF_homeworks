@@ -5,8 +5,50 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:calc"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Title="MainWindow" Height="450" Width="327">
+    <StackPanel>
+        <StackPanel>
+            <TextBlock HorizontalAlignment="Right" FontSize="12">dd</TextBlock>
+            <TextBlock HorizontalAlignment="Right" FontSize="20">9009+</TextBlock>
+        </StackPanel>
+        <StackPanel>
+            <UniformGrid  Columns="4">
+                <Button>CE</Button>
+                <Button>C</Button>
+                <Button>
+                    <Button.Content>
+                        &lt;
+                    </Button.Content>
+                </Button>
+                <Button>/</Button>
+            </UniformGrid>
+            <UniformGrid Columns="4">
+                <Button>7</Button>
+                <Button>8</Button>
+                <Button>9</Button>
+                <Button>*</Button>
+            </UniformGrid>
+            <UniformGrid Columns="4">
+                <Button>4</Button>
+                <Button>5</Button>
+                <Button>6</Button>
+                <Button>-</Button>
+            </UniformGrid>
+            <UniformGrid Columns="4">
+                <Button>1</Button>
+                <Button>2</Button>
+                <Button>3</Button>
+                <Button>+</Button>
+            </UniformGrid>
+            <UniformGrid Columns="2">
+                <UniformGrid Columns="2">
+                    <Button>.</Button>
+                    <Button>0</Button>
+                </UniformGrid>
+                <UniformGrid Columns="1">
+                    <Button>=</Button>
+                </UniformGrid>
+            </UniformGrid>
+        </StackPanel>
+    </StackPanel>
 </Window>
