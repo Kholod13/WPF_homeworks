@@ -86,6 +86,144 @@ namespace calc
             }
         }
 
+        private void ButtonDivide_Click(object sender, RoutedEventArgs e)
+        {
+            if (previousDigit == string.Empty && currentDigit == string.Empty && currentOperation == (int)Operations.None)
+                return;
+            if (previousDigit != string.Empty && currentOperation != (int)Operations.None)
+                ButtonEqual_Click_1(sender, e);
+            else if (previousDigit == string.Empty)
+                previousDigit = currentDigit;
+            currentDigit = string.Empty;
+            TextBoxHistory.Text = previousDigit + " / ";
+            currentOperation = (int)Operations.Div;
+        }
 
+        private void ButtonD(object sender, RoutedEventArgs e)
+        {
+            currentDigit += (sender as Button).Content.ToString();
+            TextBoxCurrent.Text = currentDigit;
+        }
+
+        private void ButtonEqual_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (currentDigit == string.Empty && lastOperation != -1)
+            {
+                currentDigit = lastDigit;
+                currentOperation = lastOperation;
+                switch ((Operations)lastOperation)
+                {
+                    case Operations.Add:
+                        TextBoxHistory.Text = $"{previousDigit} + ";
+                        break;
+                    case Operations.Minus:
+                        TextBoxHistory.Text = $"{previousDigit} - ";
+                        break;
+                    case Operations.Mult:
+                        TextBoxHistory.Text = $"{previousDigit} * ";
+                        break;
+                    case Operations.Div:
+                        TextBoxHistory.Text = $"{previousDigit} / ";
+                        break;
+                    default:
+                        break;
+                }
+            }
+            if (currentOperation == -1 && lastOperation == -1)
+                TextBoxHistory.Text = TextBoxCurrent.Text;
+            else
+            {
+                switch ((Operations)currentOperation)
+                {
+                    case Operations.Add:
+                        TextBoxCurrent.Text = (decimal.Parse(previousDigit) + decimal.Parse(currentDigit)).ToString();
+                        break;
+                    case Operations.Minus:
+                        TextBoxCurrent.Text = (decimal.Parse(previousDigit) - decimal.Parse(currentDigit)).ToString();
+                        break;
+                    case Operations.Mult:
+                        TextBoxCurrent.Text = (decimal.Parse(previousDigit) * decimal.Parse(currentDigit)).ToString();
+                        break;
+                    case Operations.Div:
+                        if (previousDigit != string.Empty && currentDigit == "0")
+                        {
+                            previousDigit = string.Empty;
+                            currentDigit = string.Empty;
+                            currentOperation = (int)Operations.None;
+                            TextBoxHistory.Text = string.Empty;
+                            TextBoxCurrent.Text = "Cannot divide by zero";
+                            return;
+                        }
+                        TextBoxCurrent.Text = (decimal.Parse(previousDigit) / decimal.Parse(currentDigit)).ToString();
+                        break;
+                    default:
+                        break;
+                }
+                TextBoxHistory.Text += currentDigit;
+                TextBoxHistory.Text += " = ";
+                previousDigit = TextBoxCurrent.Text;
+            }
+            lastDigit = currentDigit;
+            currentDigit = string.Empty;
+            lastOperation = currentOperation;
+            currentOperation = (int)Operations.None;
+        }
+
+        private void ButtonMultiply_Click(object sender, RoutedEventArgs e)
+        {
+            if (previousDigit == string.Empty && currentDigit == string.Empty && currentOperation == (int)Operations.None)
+                return;
+
+            if (previousDigit != string.Empty && currentOperation != (int)Operations.None)
+                ButtonEqual_Click_1(sender, e);
+            else if (previousDigit == string.Empty)
+                previousDigit = currentDigit;
+            currentDigit = string.Empty;
+            TextBoxHistory.Text = previousDigit + " * ";
+            currentOperation = (int)Operations.Mult;
+        }
+
+        private void ButtonMinus_Click(object sender, RoutedEventArgs e)
+        {
+            if (previousDigit == string.Empty && currentDigit == string.Empty && currentOperation == (int)Operations.None)
+            {
+                currentDigit = "-";
+                TextBoxCurrent.Text = "-0";
+                return;
+            }
+            if (previousDigit != string.Empty && currentOperation != (int)Operations.None)
+                ButtonEqual_Click_1(sender, e);
+            else if (previousDigit == string.Empty)
+                previousDigit = currentDigit;
+            currentDigit = string.Empty;
+            TextBoxHistory.Text = previousDigit + " - ";
+            currentOperation = (int)Operations.Minus;
+        }
+
+        private void ButtonPlus_Click(object sender, RoutedEventArgs e)
+        {
+            if (previousDigit == string.Empty && currentDigit == string.Empty && currentOperation == (int)Operations.None)
+                return;
+            if (previousDigit != string.Empty && currentOperation != (int)Operations.None)
+                ButtonEqual_Click_1(sender, e);
+            else if (previousDigit == string.Empty)
+                previousDigit = currentDigit;
+            currentDigit = string.Empty;
+            TextBoxHistory.Text = previousDigit + " + ";
+            currentOperation = (int)Operations.Add;
+        }
+
+        private void ButtonDot_Click(object sender, RoutedEventArgs e)
+        {
+            if (currentDigit.Contains(','))
+                return;
+            if (currentDigit != string.Empty && currentDigit == "-")
+                currentDigit = "-0,";
+            else if (currentDigit != string.Empty)
+                currentDigit += ",";
+            else
+                currentDigit = "0,";
+            TextBoxCurrent.Text = currentDigit;
+        }
     }
 }

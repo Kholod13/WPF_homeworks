@@ -22,31 +22,31 @@
             <RowDefinition Height="2*"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        <TextBox x:Name="TextBoxHistory" Grid.Row="0" Grid.Column="0" Margin="4" Grid.ColumnSpan="4" FontSize="20" FontWeight="Bold" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"></TextBox>
-        <TextBox x:Name="TextBoxCurrent" Grid.Row="1" Grid.Column="0" Margin="4" Grid.ColumnSpan="4" FontSize="30" FontWeight="Bold" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"></TextBox>
+        <TextBox x:Name="TextBoxHistory" IsReadOnly="True" Grid.Row="0" Grid.Column="0" Margin="4" Grid.ColumnSpan="4" FontSize="20" FontWeight="Bold" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"></TextBox>
+        <TextBox x:Name="TextBoxCurrent" IsReadOnly="True" Grid.Row="1" Grid.Column="0" Margin="4" Grid.ColumnSpan="4" FontSize="30" FontWeight="Bold" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"></TextBox>
 
         <Button Grid.Row="2" Grid.Column="0" Margin="4" Name="ButtonCE" Click="ButtonCE_Click">CE</Button>
         <Button Grid.Row="2" Grid.Column="1" Margin="4" Name="ButtonC" Click="ButtonC_Click">C</Button>
         <Button Grid.Row="2" Grid.Column="2" Margin="4" Name="ButtonDel" Click="ButtonDel_Click">&lt;</Button>
-        <Button Grid.Row="2" Grid.Column="3" Margin="4" Name="ButtonDivide">/</Button>
+        <Button Grid.Row="2" Grid.Column="3" Margin="4" Name="ButtonDivide" Click="ButtonDivide_Click">/</Button>
 
-        <Button Grid.Row="3" Grid.Column="0" Margin="4" Name="ButtonD7">7</Button>
-        <Button Grid.Row="3" Grid.Column="1" Margin="4" Name="ButtonD8">8</Button>
-        <Button Grid.Row="3" Grid.Column="2" Margin="4" Name="ButtonD9">9</Button>
-        <Button Grid.Row="3" Grid.Column="3" Margin="4" Name="ButtonMultiply">*</Button>
+        <Button Grid.Row="3" Grid.Column="0" Margin="4" Click="ButtonD">7</Button>
+        <Button Grid.Row="3" Grid.Column="1" Margin="4" Click="ButtonD">8</Button>
+        <Button Grid.Row="3" Grid.Column="2" Margin="4" Click="ButtonD">9</Button>
+        <Button Grid.Row="3" Grid.Column="3" Margin="4" Name="ButtonMultiply" Click="ButtonMultiply_Click">*</Button>
 
-        <Button Grid.Row="4" Grid.Column="0" Margin="4" Name="ButtonD4">4</Button>
-        <Button Grid.Row="4" Grid.Column="1" Margin="4" Name="ButtonD5">5</Button>
-        <Button Grid.Row="4" Grid.Column="2" Margin="4" Name="ButtonD6">6</Button>
-        <Button Grid.Row="4" Grid.Column="3" Margin="4" Name="ButtonMinus">-</Button>
+        <Button Grid.Row="4" Grid.Column="0" Margin="4" Click="ButtonD">4</Button>
+        <Button Grid.Row="4" Grid.Column="1" Margin="4" Click="ButtonD">5</Button>
+        <Button Grid.Row="4" Grid.Column="2" Margin="4" Click="ButtonD">6</Button>
+        <Button Grid.Row="4" Grid.Column="3" Margin="4" Name="ButtonMinus" Click="ButtonMinus_Click">-</Button>
 
-        <Button Grid.Row="5" Grid.Column="0" Margin="4" Name="ButtonD1">1</Button>
-        <Button Grid.Row="5" Grid.Column="1" Margin="4" Name="ButtonD2">2</Button>
-        <Button Grid.Row="5" Grid.Column="2" Margin="4" Name="ButtonD3">3</Button>
-        <Button Grid.Row="5" Grid.Column="3" Margin="4" Name="ButtonPlus">+</Button>
+        <Button Grid.Row="5" Grid.Column="0" Margin="4" Click="ButtonD">1</Button>
+        <Button Grid.Row="5" Grid.Column="1" Margin="4" Click="ButtonD">2</Button>
+        <Button Grid.Row="5" Grid.Column="2" Margin="4" Click="ButtonD">3</Button>
+        <Button Grid.Row="5" Grid.Column="3" Margin="4" Name="ButtonPlus" Click="ButtonPlus_Click">+</Button>
 
-        <Button Grid.Row="6" Grid.Column="0" Margin="4" Name="ButtonDot">.</Button>
-        <Button Grid.Row="6" Grid.Column="1" Margin="4" Name="ButtonD0">0</Button>
-        <Button Grid.Row="6" Grid.Column="2" Margin="4" Grid.ColumnSpan="2" Name="Button_Click_Equal">=</Button>
+        <Button Grid.Row="6" Grid.Column="0" Margin="4" Name="ButtonDot" Click="ButtonDot_Click">.</Button>
+        <Button Grid.Row="6" Grid.Column="1" Margin="4" Click="ButtonD">0</Button>
+        <Button Grid.Row="6" Grid.Column="2" Margin="4" Grid.ColumnSpan="2" Name="ButtonEqual" Click="ButtonEqual_Click_1" >=</Button>
     </Grid>
 </Window>
