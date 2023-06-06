@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:controls_hotel_rent"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <ScrollViewer>
-        <StackPanel>
+        Title="MainWindow" Height="894" Width="1000" MinWidth="800">
+    <ScrollViewer Margin="0,0,0,-179">
+        <StackPanel Height="1742">
             <Grid Height="40" Background="#000">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="40"/>
-                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition MinWidth="106" MaxWidth="106" Width="1*"/>
                     <ColumnDefinition Width="6*"/>
                     <ColumnDefinition Width="40"/>
                     <ColumnDefinition Width="40"/>
@@ -20,7 +20,7 @@
                     <ColumnDefinition Width="40"/>
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.Column="0" DockPanel.Dock="Left" Background="DodgerBlue" BorderBrush="DodgerBlue"  Padding="10">
+                <Button Grid.Column="0" Click="Button_Click" DockPanel.Dock="Left" Background="DodgerBlue" BorderBrush="DodgerBlue"  Padding="10">
                     <Image Source="Resources/Menu_icon.png"></Image>
                 </Button>
 
@@ -53,20 +53,233 @@
                 </Button>
             </Grid>
 
-            <Border Padding="50, 30, 30, 30">
-                <Grid Background="Black" Height="50" >
+            <Grid Height="50" Margin="50, 30, 30, 30">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                
+                <Grid Grid.Column="0">
                     <Grid.ColumnDefinitions>
-                    
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                        <ColumnDefinition Width="1 *"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                    
-                    </Grid.RowDefinitions>
-                
-                
-                
+                    <Border Background="DodgerBlue">
+                        <TextBlock Foreground="White" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            SS
+                        </TextBlock>
+                    </Border>
+                    <UniformGrid Grid.Column="1" Rows="2">
+                        <TextBlock Margin="10,-8,0,0" FontSize="25" Grid.Row="0">Sitio de exhibicion</TextBlock>
+                        <UniformGrid HorizontalAlignment="Left" Columns="5" Grid.Row="1">
+                            <Button Margin="8, 0" BorderBrush="Transparent" Background="Transparent">Home</Button>
+                            <Button Margin="-8, 0" BorderBrush="Transparent" Background="Transparent" >Documents</Button>
+                            <Button Margin="8, 0" BorderBrush="Transparent" Background="Transparent" >Pages</Button>
+                            <Button Margin="-8, 0" BorderBrush="Transparent" Background="Transparent" >Site contacts</Button>
+                            <Button Margin="8, 0" BorderBrush="Transparent" Background="Transparent" Foreground="DodgerBlue" >Edit</Button>
+                        </UniformGrid>
+                    </UniformGrid>
                 </Grid>
-            </Border>
-            
+                
+                <UniformGrid HorizontalAlignment="Right" MaxWidth="200" Rows="2" Grid.Column="1">
+                    <DockPanel MaxWidth="90" HorizontalAlignment="Right">
+                        <Border Padding="3">
+                            <Image Source="Resources/share.png"></Image>
+                        </Border>
+                        <Button FontSize="14" BorderBrush="Transparent" Background="Transparent">Share site</Button>
+                    </DockPanel>
+                    <Border HorizontalAlignment="Right" Padding="5" MinWidth="190" BorderBrush="Black" BorderThickness="0.3">
+                        <DockPanel>
+                            <Image Source="Resources/loupe.png" Margin="0,0,5,0"></Image>
+                            <TextBox Foreground="Silver" Margin="0,-3,0,0"  FontSize="14" VerticalAlignment="Center" BorderThickness="0">Search</TextBox>
+                        </DockPanel>
+                    </Border>
+                </UniformGrid>
+                
+            </Grid>
+
+            <Grid Background="#f4f4f4" Height="30">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"></ColumnDefinition>
+                    <ColumnDefinition Width="1* "></ColumnDefinition>
+                    <ColumnDefinition Width="80"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <DockPanel Margin="50,0,0,0" Grid.Column="0">
+                    <Border Padding="7">
+                        <Image Source="Resources/plus_Black.png"></Image>
+                    </Border>
+                    
+                    <Button Padding="2,0,0,0" BorderBrush="Transparent" Background="Transparent" Margin="0" >New</Button>
+
+                    <Border Padding="1, 7, 7, 7">
+                        <Image Source="Resources/down_Arrow.png"></Image>
+                    </Border>
+                </DockPanel>
+
+                <TextBlock Margin="15,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1">Published</TextBlock>
+
+                <DockPanel Background="DodgerBlue" Grid.Column="2">
+                    <Border Padding="8" Margin="8,0,0,0">
+                        <Image Source="Resources/pencil-48.png"></Image>
+                    </Border>
+
+                    <Button HorizontalAlignment="Left" Foreground="White" Padding="2,0,0,0" BorderBrush="Transparent" Background="Transparent" Margin="0" >Edit</Button>
+
+                </DockPanel>
+
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.4*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Border MaxHeight="275" Grid.Column="0">
+                    <Image HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="UniformToFill" Source="Resources/img1.png"></Image>
+                </Border>
+
+                <Border Margin="40, 40, 40, 30" Grid.Column="1">
+                    <DockPanel><!--
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition Height="1*"></RowDefinition>
+                        </Grid.RowDefinitions>-->
+
+                        <Border DockPanel.Dock="Top" HorizontalAlignment="Left">
+                            <TextBlock Padding="7, 2, 0, 2" Height="20" Width="40" VerticalAlignment="Top" Background="DodgerBlue" HorizontalAlignment="Center" Foreground="White">NEW</TextBlock>
+                        </Border>
+
+                        <Border DockPanel.Dock="Top" Padding="0,10,0,0" >
+                            <TextBlock FontWeight="Bold" FontSize="25">Realizar una impresion</TextBlock>
+                        </Border>
+
+                        <Border DockPanel.Dock="Top" Padding="0,10,0,0">
+                            <TextBlock Foreground="#BEBEBE" TextWrapping="WrapWithOverflow">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+                            </TextBlock>
+                        </Border>
+
+
+
+                        <Border DockPanel.Dock="Bottom" Margin="0,20,0,0" Padding="0,5,0,0" Height="22" BorderBrush="DodgerBlue" BorderThickness="0, 2, 0, 0" VerticalAlignment="Bottom">
+                            <TextBlock Foreground="DodgerBlue" FontWeight="Bold">LEARN ABOUT COMMUNICATION SITES</TextBlock>
+                        </Border>
+                    
+                    </DockPanel>
+                </Border>
+                
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1.4*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Border  MaxHeight="275" Grid.Column="1">
+                    <Image HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="UniformToFill" Source="Resources/img2.jpg"></Image>
+                </Border>
+
+                <Border Margin="40, 40, 40, 30" Grid.Column="0">
+                    <DockPanel>
+
+                        <Border DockPanel.Dock="Top" HorizontalAlignment="Left">
+                            <TextBlock Padding="7, 2, 0, 2" Height="20" Width="68" VerticalAlignment="Top" Background="DodgerBlue" HorizontalAlignment="Center" Foreground="White">CONNECT</TextBlock>
+                        </Border>
+
+                        <Border DockPanel.Dock="Top" Padding="0,10,0,0" >
+                            <TextBlock FontWeight="Bold" FontSize="25">Compartirsu estratega</TextBlock>
+                        </Border>
+
+                        <Border DockPanel.Dock="Top" Padding="0,10,0,0">
+                            <TextBlock Foreground="#BEBEBE" TextWrapping="WrapWithOverflow">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+                            </TextBlock>
+                        </Border>
+
+
+
+                        <Border DockPanel.Dock="Bottom" Margin="0,20,0,0" Padding="0,5,0,0" Height="22" BorderBrush="DodgerBlue" BorderThickness="0, 2, 0, 0" VerticalAlignment="Bottom">
+                            <TextBlock Foreground="DodgerBlue" FontWeight="Bold">LEARN ABOUT CUSTOMIZE THIS SITE</TextBlock>
+                        </Border>
+
+                    </DockPanel>
+                </Border>
+
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.4*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Border  MaxHeight="275" Grid.Column="0">
+                    <Image HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="UniformToFill" Source="Resources/img3.png"></Image>
+                </Border>
+
+                <Border Margin="40, 40, 40, 30" Grid.Column="1">
+                    <DockPanel>
+
+                        <Border DockPanel.Dock="Top" HorizontalAlignment="Left">
+                            <TextBlock Padding="7, 2, 0, 2" Height="20" Width="58" VerticalAlignment="Top" Background="DodgerBlue" HorizontalAlignment="Center" Foreground="White">SUPORT</TextBlock>
+                        </Border>
+
+                        <Border DockPanel.Dock="Top" Padding="0,10,0,0" >
+                            <TextBlock FontWeight="Bold" FontSize="25">Traer los resultados al light</TextBlock>
+                        </Border>
+
+                        <Border DockPanel.Dock="Top" Padding="0,10,0,0">
+                            <TextBlock Foreground="#BEBEBE" TextWrapping="WrapWithOverflow">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+                            </TextBlock>
+                        </Border>
+
+
+
+                        <Border DockPanel.Dock="Bottom" Margin="0,20,0,0" Padding="0,5,0,0" Height="22" BorderBrush="DodgerBlue" BorderThickness="0, 2, 0, 0" VerticalAlignment="Bottom">
+                            <TextBlock Foreground="DodgerBlue" FontWeight="Bold">LEARN ABOUT WEB PARTS</TextBlock>
+                        </Border>
+
+                    </DockPanel>
+                </Border>
+
+            </Grid>
+
+            <TextBlock Foreground="#858585" FontSize="20" Margin="40, 50, 0, 30">Image gallery</TextBlock>
+
+            <UniformGrid Margin="35, -5, 35, 0" Columns="4" Rows="2">
+                <Border Padding="5">
+                    <Image HorizontalAlignment="Center" Stretch="UniformToFill" Source="Resources/pexels-freemockupsorg-775219.jpg"></Image>
+                </Border>
+                <Border Padding="5">
+                    <Image HorizontalAlignment="Center" Stretch="UniformToFill" Source="Resources/pexels-jack-sparrow-4045031.jpg"></Image>
+                </Border>
+                <Border Padding="5">
+                    <Image HorizontalAlignment="Center" Stretch="UniformToFill" Source="Resources/pexels-ksenia-chernaya-3965521.jpg"></Image>
+                </Border>
+                <Border Padding="5">
+                    <Image HorizontalAlignment="Center" Stretch="UniformToFill" Source="Resources/pexels-leah-kelley-6480707.jpg"></Image>
+                </Border>
+                <Border Padding="5">
+                    <Image HorizontalAlignment="Center" Stretch="UniformToFill" Source="Resources/pexels-lisa-fotios-1090638.jpg"></Image>
+                </Border>
+                <Border Padding="5">
+                    <Image HorizontalAlignment="Center" Stretch="UniformToFill" Source="Resources/pexels-pixabay-276514.jpg"></Image>
+                </Border>
+                <Border Padding="5">
+                    <Image HorizontalAlignment="Center" Stretch="UniformToFill" Source="Resources/pexels-terje-sollie-312029.jpg"></Image>
+                </Border>
+                <Border Padding="5">
+                    <Image HorizontalAlignment="Center" Stretch="UniformToFill" Source="Resources/pexels-vlada-karpovich-4050318.jpg"></Image>
+                </Border>
+            </UniformGrid>
+
         </StackPanel>
     </ScrollViewer>
 </Window>

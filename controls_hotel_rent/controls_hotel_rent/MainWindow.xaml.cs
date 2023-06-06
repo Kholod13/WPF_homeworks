@@ -25,9 +25,9 @@ namespace controls_hotel_rent
             InitializeComponent();
         }
 
-        private void Button_MouseMove(object sender, MouseEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+
         }
     }
 }
