@@ -7,4 +7,59 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Resources\down_Arrow.png" />
+    <None Remove="Resources\Fasticon-Leopard-Iphone-Sites-Folder.256.png" />
+    <None Remove="Resources\icon-g28ffc90b9_640.png" />
+    <None Remove="Resources\img1.png" />
+    <None Remove="Resources\img2.jpg" />
+    <None Remove="Resources\img3.png" />
+    <None Remove="Resources\loupe.png" />
+    <None Remove="Resources\Menu_icon.png" />
+    <None Remove="Resources\Menu_white.png" />
+    <None Remove="Resources\message_white.png" />
+    <None Remove="Resources\pencil-48.png" />
+    <None Remove="Resources\pexels-freemockupsorg-775219.jpg" />
+    <None Remove="Resources\pexels-jack-sparrow-4045031.jpg" />
+    <None Remove="Resources\pexels-ksenia-chernaya-3965521.jpg" />
+    <None Remove="Resources\pexels-leah-kelley-6480707.jpg" />
+    <None Remove="Resources\pexels-lisa-fotios-1090638.jpg" />
+    <None Remove="Resources\pexels-pixabay-276514.jpg" />
+    <None Remove="Resources\pexels-terje-sollie-312029.jpg" />
+    <None Remove="Resources\pexels-vlada-karpovich-4050318.jpg" />
+    <None Remove="Resources\plus_Black.png" />
+    <None Remove="Resources\pngegg.png" />
+    <None Remove="Resources\question_mark_white.png" />
+    <None Remove="Resources\setting_white.png" />
+    <None Remove="Resources\share.png" />
+    <None Remove="Resources\skype_white.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\down_Arrow.png" />
+    <Resource Include="Resources\Fasticon-Leopard-Iphone-Sites-Folder.256.png" />
+    <Resource Include="Resources\icon-g28ffc90b9_640.png" />
+    <Resource Include="Resources\img1.png" />
+    <Resource Include="Resources\img2.jpg" />
+    <Resource Include="Resources\img3.png" />
+    <Resource Include="Resources\loupe.png" />
+    <Resource Include="Resources\Menu_icon.png" />
+    <Resource Include="Resources\message_white.png" />
+    <Resource Include="Resources\pencil-48.png" />
+    <Resource Include="Resources\pexels-freemockupsorg-775219.jpg" />
+    <Resource Include="Resources\pexels-jack-sparrow-4045031.jpg" />
+    <Resource Include="Resources\pexels-ksenia-chernaya-3965521.jpg" />
+    <Resource Include="Resources\pexels-leah-kelley-6480707.jpg" />
+    <Resource Include="Resources\pexels-lisa-fotios-1090638.jpg" />
+    <Resource Include="Resources\pexels-pixabay-276514.jpg" />
+    <Resource Include="Resources\pexels-terje-sollie-312029.jpg" />
+    <Resource Include="Resources\pexels-vlada-karpovich-4050318.jpg" />
+    <Resource Include="Resources\plus_Black.png" />
+    <Resource Include="Resources\pngegg.png" />
+    <Resource Include="Resources\question_mark_white.png" />
+    <Resource Include="Resources\setting_white.png" />
+    <Resource Include="Resources\share.png" />
+    <Resource Include="Resources\skype_white.png" />
+  </ItemGroup>
+
 </Project>

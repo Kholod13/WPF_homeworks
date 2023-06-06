@@ -6,7 +6,67 @@
         xmlns:local="clr-namespace:controls_hotel_rent"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <ScrollViewer>
+        <StackPanel>
+            <Grid Height="40" Background="#000">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="6*"/>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="40"/>
+                </Grid.ColumnDefinitions>
 
-    </Grid>
+                <Button Grid.Column="0" DockPanel.Dock="Left" Background="DodgerBlue" BorderBrush="DodgerBlue"  Padding="10">
+                    <Image Source="Resources/Menu_icon.png"></Image>
+                </Button>
+
+                <TextBlock Foreground="Silver" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                       Office 365
+                </TextBlock>
+
+                <TextBlock Margin="20, 0" Foreground="Silver" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center">
+                       SharePoint
+                </TextBlock>
+
+                <Button Grid.Column="3" DockPanel.Dock="Left" Background="Transparent" BorderBrush="White" BorderThickness="0.1"  Padding="6.5">
+                    <Image Source="Resources/skype_white.png"></Image>
+                </Button>
+
+                <Button Grid.Column="4" DockPanel.Dock="Left" Background="Transparent" BorderBrush="White" BorderThickness="0.1"  Padding="6">
+                    <Image Source="Resources/message_white.png"></Image>
+                </Button>
+
+                <Button Grid.Column="5" DockPanel.Dock="Left" Background="Transparent" BorderBrush="White" BorderThickness="0.1"  Padding="6.5">
+                    <Image Source="Resources/setting_white.png"></Image>
+                </Button>
+
+                <Button Grid.Column="6" DockPanel.Dock="Left" Background="Transparent" BorderBrush="White" BorderThickness="0.1"  Padding="4">
+                    <Image Source="Resources/question_mark_white.png"></Image>
+                </Button>
+
+                <Button Grid.Column="7" DockPanel.Dock="Left" Background="Transparent" BorderBrush="White" BorderThickness="0.1"  Padding="-1">
+                    <Image Source="Resources/icon-g28ffc90b9_640.png"></Image>
+                </Button>
+            </Grid>
+
+            <Border Padding="50, 30, 30, 30">
+                <Grid Background="Black" Height="50" >
+                    <Grid.ColumnDefinitions>
+                    
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                    
+                    </Grid.RowDefinitions>
+                
+                
+                
+                </Grid>
+            </Border>
+            
+        </StackPanel>
+    </ScrollViewer>
 </Window>
