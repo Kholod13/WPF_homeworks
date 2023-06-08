@@ -15,20 +15,23 @@
             <Label DockPanel.Dock="Left" FontSize="15">Контактна інформація:</Label>
             <TextBox Name="contact_info" Margin="3"></TextBox>
         </DockPanel>
-        <RepeatButton Height="25" Margin="100,3">+</RepeatButton>
+        <DockPanel>
+            <TextBlock FontSize="18" Name="num_peoples" Width="100" Margin="50,0,0,0"></TextBlock>
+            <RepeatButton Height="25" Margin="100,3" Click="RepeatButton_Click">+</RepeatButton>
+        </DockPanel>
         <DockPanel>
             <Label DockPanel.Dock="Left" FontSize="15">Тип номеру:</Label>
             <UniformGrid Columns="3" Margin="0,10,0,0">
-                <RadioButton Margin="15,0,0,0">Економ</RadioButton>
-                <RadioButton>Стандарт</RadioButton>
-                <RadioButton>Люкс</RadioButton>
+                <RadioButton Name="radioButtonEco" Margin="15,0,0,0">Економ</RadioButton>
+                <RadioButton Name="radioButtonStandart">Стандарт</RadioButton>
+                <RadioButton Name="radioButtonLux">Люкс</RadioButton>
             </UniformGrid>
         </DockPanel>
-        <Calendar SelectionMode="MultipleRange"></Calendar>
+        <Calendar Name="Calendar" SelectionMode="MultipleRange"></Calendar>
         <UniformGrid Columns="2">
-            <Button Margin="20,3" MaxWidth="100" Click="Button_Click">OK</Button>
-            <Button Margin="20,3" MaxWidth="100" >Cancel</Button>
+            <Button Name="buttonOK" Margin="20,3" MaxWidth="100" Click="Button_Click">OK</Button>
+            <Button Margin="20,3" MaxWidth="100" Click="Button_Click_1" >Cancel</Button>
         </UniformGrid>
-        <CheckBox HorizontalAlignment="Center" >Умови використання</CheckBox>
+        <CheckBox Name="checkBox" HorizontalAlignment="Center" Checked="checkBox_Checked" >Умови використання</CheckBox>
     </StackPanel>
 </Window>
