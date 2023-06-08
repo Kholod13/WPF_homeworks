@@ -8,30 +8,30 @@
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
         <DockPanel >
-            <Label DockPanel.Dock="Left" FontSize="15">Прізвище та ім’я:</Label>
+            <Label DockPanel.Dock="Left" FontSize="15">_Name and Lastname:</Label>
             <TextBox Name="name" Margin="3"></TextBox>
         </DockPanel>
         <DockPanel >
-            <Label DockPanel.Dock="Left" FontSize="15">Контактна інформація:</Label>
+            <Label DockPanel.Dock="Left" FontSize="15">-Contact info:</Label>
             <TextBox Name="contact_info" Margin="3"></TextBox>
         </DockPanel>
         <DockPanel>
             <TextBlock FontSize="18" Name="num_peoples" Width="100" Margin="50,0,0,0"></TextBlock>
-            <RepeatButton Height="25" Margin="100,3" Click="RepeatButton_Click">+</RepeatButton>
+            <RepeatButton Height="25" Margin="100,3" Click="RepeatButton_Click">_+</RepeatButton>
         </DockPanel>
         <DockPanel>
-            <Label DockPanel.Dock="Left" FontSize="15">Тип номеру:</Label>
+            <Label DockPanel.Dock="Left" FontSize="15">_Type room:</Label>
             <UniformGrid Columns="3" Margin="0,10,0,0">
-                <RadioButton Name="radioButtonEco" Margin="15,0,0,0">Економ</RadioButton>
-                <RadioButton Name="radioButtonStandart">Стандарт</RadioButton>
-                <RadioButton Name="radioButtonLux">Люкс</RadioButton>
+                <RadioButton Name="radioButtonEco" Margin="15,0,0,0">_Eco</RadioButton>
+                <RadioButton Name="radioButtonStandart">_Standart</RadioButton>
+                <RadioButton Name="radioButtonLux">_Lux</RadioButton>
             </UniformGrid>
         </DockPanel>
         <Calendar Name="Calendar" SelectionMode="MultipleRange"></Calendar>
         <UniformGrid Columns="2">
-            <Button Name="buttonOK" Margin="20,3" MaxWidth="100" Click="Button_Click">OK</Button>
-            <Button Margin="20,3" MaxWidth="100" Click="Button_Click_1" >Cancel</Button>
+            <Button Name="buttonOK" Margin="20,3" MaxWidth="100" Click="Button_Click">_OK</Button>
+            <Button Margin="20,3" MaxWidth="100" Click="Button_Click_1" >_Cancel</Button>
         </UniformGrid>
-        <CheckBox Name="checkBox" HorizontalAlignment="Center" Checked="checkBox_Checked" >Умови використання</CheckBox>
+        <CheckBox Name="checkBox" HorizontalAlignment="Center" Checked="checkBox_Checked" >_Умови використання</CheckBox>
     </StackPanel>
 </Window>
