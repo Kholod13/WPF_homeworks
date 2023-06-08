@@ -1,0 +1,34 @@
+﻿<Window x:Class="clw0206.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:clw0206"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <DockPanel >
+            <Label DockPanel.Dock="Left" FontSize="15">Прізвище та ім’я:</Label>
+            <TextBox Name="name" Margin="3"></TextBox>
+        </DockPanel>
+        <DockPanel >
+            <Label DockPanel.Dock="Left" FontSize="15">Контактна інформація:</Label>
+            <TextBox Name="contact_info" Margin="3"></TextBox>
+        </DockPanel>
+        <RepeatButton Height="25" Margin="100,3">+</RepeatButton>
+        <DockPanel>
+            <Label DockPanel.Dock="Left" FontSize="15">Тип номеру:</Label>
+            <UniformGrid Columns="3" Margin="0,10,0,0">
+                <RadioButton Margin="15,0,0,0">Економ</RadioButton>
+                <RadioButton>Стандарт</RadioButton>
+                <RadioButton>Люкс</RadioButton>
+            </UniformGrid>
+        </DockPanel>
+        <Calendar SelectionMode="MultipleRange"></Calendar>
+        <UniformGrid Columns="2">
+            <Button Margin="20,3" MaxWidth="100" Click="Button_Click">OK</Button>
+            <Button Margin="20,3" MaxWidth="100" >Cancel</Button>
+        </UniformGrid>
+        <CheckBox HorizontalAlignment="Center" >Умови використання</CheckBox>
+    </StackPanel>
+</Window>

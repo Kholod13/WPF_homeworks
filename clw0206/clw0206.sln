@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wpf_hotel_rent", "wpf_hotel_rent\wpf_hotel_rent.csproj", "{6E47B415-9937-4832-92CF-A985245173EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clw0206", "clw0206\clw0206.csproj", "{B0AC8D2E-4EA8-42F4-A05E-D9A98B15B26E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6E47B415-9937-4832-92CF-A985245173EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6E47B415-9937-4832-92CF-A985245173EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6E47B415-9937-4832-92CF-A985245173EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6E47B415-9937-4832-92CF-A985245173EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0AC8D2E-4EA8-42F4-A05E-D9A98B15B26E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0AC8D2E-4EA8-42F4-A05E-D9A98B15B26E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0AC8D2E-4EA8-42F4-A05E-D9A98B15B26E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0AC8D2E-4EA8-42F4-A05E-D9A98B15B26E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {72B8122F-E7A3-4378-B962-5A60C703A95E}
+		SolutionGuid = {4E928C6D-12B2-48A5-8C83-344F1F954FB4}
 	EndGlobalSection
 EndGlobal
