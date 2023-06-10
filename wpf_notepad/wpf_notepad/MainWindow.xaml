@@ -5,8 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:wpf_notepad"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" MinWidth="600" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
 
+        <Menu Margin="5" Background="Transparent" DockPanel.Dock="Top" IsMainMenu="True">
+            <MenuItem Header="_Edit" FontSize="15">
+                
+            </MenuItem>
+            <MenuItem Header="_Operations" FontSize="15">
+                
+            </MenuItem>
+            <MenuItem FontSize="15" Header="_Often using">
+                
+            </MenuItem>
+        </Menu>
+
+        <TextBox TextWrapping="Wrap" BorderBrush="Black" Margin="20, 0, 20, 0" Grid.Row="1" ></TextBox>
+
+        <UniformGrid Columns="3" Grid.Row="2">
+            <TextBlock Margin="20,7,7,7" FontSize="16">
+                Number input lines: </TextBlock>
+            <TextBlock Margin="7" FontSize="16" HorizontalAlignment="Center">
+                Number input symbols: </TextBlock>
+            <TextBlock Margin="7,7,20,7" HorizontalAlignment="Right" FontSize="16">
+                Number input words: </TextBlock>
+        </UniformGrid>
     </Grid>
 </Window>
