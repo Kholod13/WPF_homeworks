@@ -16,8 +16,8 @@
 
         <Menu Margin="5" Background="Transparent" DockPanel.Dock="Top" IsMainMenu="True">
             <MenuItem FontSize="14" Header="_File">
-                <MenuItem Header="New" Click="MenuItem_Click_2"/>
-                <MenuItem Header="Exit" Click="MenuItem_Click_3"/>
+                <MenuItem Header="_New File" Click="MenuItem_Click_2"/>
+                <MenuItem Header="_Exit" Click="MenuItem_Click_3"/>
             </MenuItem>
             <MenuItem Header="_Edit" FontSize="14">
                 <Button FontSize="12" Background="Transparent" BorderBrush="Transparent">Copy</Button>
