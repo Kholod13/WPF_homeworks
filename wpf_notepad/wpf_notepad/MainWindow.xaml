@@ -14,26 +14,30 @@
         </Grid.RowDefinitions>
 
         <Menu Margin="5" Background="Transparent" DockPanel.Dock="Top" IsMainMenu="True">
-            <MenuItem Header="_Edit" FontSize="15">
-                
+            <MenuItem FontSize="14" Header="_File">
+                <MenuItem Header="New" Click="MenuItem_Click_2"/>
+                <MenuItem Header="Exit" Click="MenuItem_Click_3"/>
             </MenuItem>
-            <MenuItem Header="_Operations" FontSize="15">
-                
-            </MenuItem>
-            <MenuItem FontSize="15" Header="_Often using">
-                
+            <MenuItem Header="_Edit" FontSize="14">
+                <Button FontSize="12" Background="Transparent" BorderBrush="Transparent">Copy</Button>
+                <Button FontSize="12" Background="Transparent" BorderBrush="Transparent">Cut</Button>
+                <Button FontSize="12" Background="Transparent" BorderBrush="Transparent">Paste</Button>
+                <Button FontSize="12" Background="Transparent" BorderBrush="Transparent">Select All</Button>
+                <Button FontSize="12" Background="Transparent" BorderBrush="Transparent">Deselect All</Button>
+                <Button FontSize="12" Background="Transparent" BorderBrush="Transparent">Delete</Button>
             </MenuItem>
         </Menu>
 
-        <TextBox TextWrapping="Wrap" BorderBrush="Black" Margin="20, 0, 20, 0" Grid.Row="1" ></TextBox>
+        <TextBox Name="TextBox" TextWrapping="Wrap" BorderBrush="Black" Margin="20, 0, 20, 0" Grid.Row="1" ></TextBox>
 
-        <UniformGrid Columns="3" Grid.Row="2">
-            <TextBlock Margin="20,7,7,7" FontSize="16">
-                Number input lines: </TextBlock>
-            <TextBlock Margin="7" FontSize="16" HorizontalAlignment="Center">
-                Number input symbols: </TextBlock>
-            <TextBlock Margin="7,7,20,7" HorizontalAlignment="Right" FontSize="16">
-                Number input words: </TextBlock>
-        </UniformGrid>
+        <StatusBar Height="25" VerticalAlignment="Bottom" Grid.Row="2" Background="Black">
+            <StatusBarItem>
+                <DockPanel>
+                    <Label x:Name="numStrings" Foreground="White" Padding="20, 0, 10, 0">Strings: 0</Label>
+                    <Label x:Name="numWords" Foreground="White" Padding="10, 0">Words: 0</Label>
+                    <Label x:Name="numSymbols" Foreground="White" Padding="10, 0">Symbols: 0</Label>
+                </DockPanel>
+            </StatusBarItem>
+        </StatusBar>
     </Grid>
 </Window>

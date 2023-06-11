@@ -24,5 +24,27 @@ namespace wpf_notepad
         {
             InitializeComponent();
         }
+
+        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        {
+            TextBox.Text = string.Empty;
+        }
+
+        private void MenuItem_Click_3(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ShowStatusBar()
+        {
+            int str, wrd, sym;
+            str = TextBox.GetLineIndexFromCharacterIndex(TextBox.CaretIndex);
+            numStrings.Content = $"String: {str}";
+            wrd = TextBox.Text.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Count();
+            numWords.Content = $"Words: {str}";
+            sym = TextBox.Text.Length;
+            numSymbols.Content = $"Symbols: {str}";
+        }
+
     }
 }
