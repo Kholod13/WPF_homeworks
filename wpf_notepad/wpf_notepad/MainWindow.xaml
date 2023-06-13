@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:wpf_notepad"
         mc:Ignorable="d"
         Title="MainWindow" MinWidth="600" Height="450" Width="800">
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -30,10 +31,32 @@
         </Menu>
 
         <DockPanel Grid.Row="1">
-            
+            <Menu Background="Transparent">
+                <MenuItem Margin="20,0,0,0" Header="Text Style" FontSize="16">
+                    <Button x:Name="ButtonBold" Click="ButtonBold_Click" FontSize="12" Background="Transparent" BorderBrush="Transparent">Bold</Button>
+                    <Button x:Name="ButtonItalic" Click="ButtonItalic_Click" FontSize="12" Background="Transparent" BorderBrush="Transparent">Italic</Button>
+                    <Button x:Name="ButtonUnderline" Click="ButtonUnderline_Click" FontSize="12" Background="Transparent" BorderBrush="Transparent">Underline</Button>
+                </MenuItem>
+                <MenuItem Header="Text Align" FontSize="16">
+                    <Button x:Name="ButtonAlignLeft" Click="ButtonAlignLeft_Click" FontSize="12" Background="Transparent" BorderBrush="Transparent">Left</Button>
+                    <Button x:Name="ButtonAlignCenter" Click="ButtonAlignCenter_Click" FontSize="12" Background="Transparent" BorderBrush="Transparent">Center</Button>
+                    <Button x:Name="ButtonAlignRight" Click="ButtonAlignRight_Click" FontSize="12" Background="Transparent" BorderBrush="Transparent">Right</Button>
+                </MenuItem>
+            </Menu>
+            <ToolBarTray>
+                <ToolBar>
+
+                        <TextBlock FontSize="16" Margin="0,0,5,0" Text="Size: " VerticalAlignment="Center"/>
+                        <ComboBox x:Name="sizeComboBox" SelectionChanged="sizeComboBox_SelectionChanged" MinWidth="30"/>
+                </ToolBar>
+                <ToolBar>
+                    <TextBlock Text="Color: " VerticalAlignment="Center"/>
+                    <ComboBox x:Name="colorComboBox" SelectionChanged="colorComboBox_SelectionChanged" MinWidth="30"></ComboBox>
+                </ToolBar>
+            </ToolBarTray>
         </DockPanel>
 
-        <TextBox Name="TextBox" TextWrapping="Wrap" BorderBrush="Black" Margin="20, 0, 20, 0" Grid.Row="2" ></TextBox>
+        <TextBox AcceptsReturn="True" TextChanged="TextBox_TextChanged" Name="TextBox" TextWrapping="Wrap" BorderBrush="Black" Margin="20, 0, 20, 0" Grid.Row="2" ></TextBox>
 
         <StatusBar Height="25" VerticalAlignment="Bottom" Grid.Row="3" Background="Black">
             <StatusBarItem>
